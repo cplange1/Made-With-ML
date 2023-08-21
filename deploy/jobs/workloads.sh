@@ -25,7 +25,7 @@ python madewithml/train.py \
     --train-loop-config "$TRAIN_LOOP_CONFIG" \
     --num-workers 1 \
     --cpu-per-worker 10 \
-    --gpu-per-worker 1 \
+    --gpu-per-worker 0 \
     --num-epochs 10 \
     --batch-size 256 \
     --results-fp $RESULTS_FILE

@@ -2,7 +2,8 @@ def test_dataset(df):
     """Test dataset quality and integrity."""
     column_list = ["id", "created_on", "title", "description", "tag"]
     df.expect_table_columns_to_match_ordered_list(column_list=column_list)  # schema adherence
-    tags = ["computer-vision", "natural-language-processing", "mlops", "other"]
+    # tags = ["computer-vision", "natural-language-processing", "mlops", "other"]
+    tags = ["computer-vision", "natural-language-processing", "mlops", "other", "graph-learning", "time-series", "reinforcement-learning"]
     df.expect_column_values_to_be_in_set(column="tag", value_set=tags)  # expected labels
     df.expect_compound_columns_to_be_unique(column_list=["title", "description"])  # data leaks
     df.expect_column_values_to_not_be_null(column="tag")  # missing values

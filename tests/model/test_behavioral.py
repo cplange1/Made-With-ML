@@ -55,7 +55,8 @@ def test_directional(input, label, predictor):
         ),
         (
             "This is about graph neural networks.",
-            "other",
+            "graph-learning",
+            # "other",
         ),
     ],
 )
